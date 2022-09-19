@@ -1,10 +1,11 @@
-name: pc
+name: pc-desktop
 version: '22-0.3'
 type: gadget
-base: core22
+build-base: core22
+base: core22-desktop
 summary: PC gadget for generic devices
 description: |
-    This gadget enables generic pc devices to work with Ubuntu Core
+    This gadget enables generic pc devices to work with Ubuntu Core Desktop
 confinement: strict
 grade: stable
 icon: icon.png
