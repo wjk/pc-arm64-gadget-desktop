@@ -8,6 +8,9 @@ description: |
     This gadget enables generic pc devices to work with Ubuntu Core Desktop
 confinement: strict
 grade: stable
+architectures:
+  - build-on: amd64
+    build-for: amd64
 icon: icon.png
 
 parts:
