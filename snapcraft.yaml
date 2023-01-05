@@ -22,6 +22,6 @@ parts:
       - grub-common
     plugin: make
 
-  scripts:
-    source: ./scripts
+  extra:
+    source: ./extra
     plugin: dump
