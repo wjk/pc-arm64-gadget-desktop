@@ -60,6 +60,7 @@ defaults:
   system:
     experimental.user-daemons: true
     experimental.dbus-activation: true
+    refresh.retain: 2
 
 # Connect ubuntu-desktop-session
 connections:
