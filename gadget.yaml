@@ -81,9 +81,13 @@ connections:
   - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:shell-config-files
     slot: system:system-files
   - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:upower-observe
-
   - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:network-manager
     slot: RmBXKl6HO6YOC2DE4G2q1JzWImC04EUy:service
+  - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:bluez
+    slot: JmzJi9kQvHUWddZ32PDJpBRXUpGRxvNS:service
+  - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:bluetooth-control
+  - plug: LVkazk0JLrL0ivuHRlv3wp3bK1nAgwtN:cups-control
+    slot: m1eQacDdXCthEwWQrESei3Zao3d5gfJF:cups-control
 
   # Connect evince to ubuntu-desktop-session
   - plug: EDFg87ESUg9sAIlm0Vm5Wmr0LjiEonSm:desktop
