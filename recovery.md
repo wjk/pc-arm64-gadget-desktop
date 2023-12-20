@@ -53,7 +53,7 @@ account for now. This will change in a later revision of this doc.
 **** later the initramfs will allow selecting different recovery systems
 
 We always boot into the system-recovery partition. It contain the
-/efi/BOOT/BOOTX64.EFI (shim.efi.signed) and grubx86.efi. We will
+/efi/BOOT/BOOTAA64.EFI (shim.efi.signed) and grubarm64.efi. We will
 present a boot menu with the modes "Normal", "Recovery", "Install".
 
 The "normal" boot mode will just chainboot into the system-boot
@@ -88,10 +88,10 @@ Similar to "firstboot" mode we have today. The differences:
 
 * explicitly enabled via `snap_recovery_mode == "recovery"`
 * requires mounting:
-** unlock /writable to a different mount point
-** create tmpfs on ${rootmnt}/writable
-** mount the right recovery seed into /var/lib/snapd/seed
-** do an "install" into tmpfs to have all snapd available (e.g. nm)
+* * unlock /writable to a different mount point
+* * create tmpfs on ${rootmnt}/writable
+* * mount the right recovery seed into /var/lib/snapd/seed
+* * do an "install" into tmpfs to have all snapd available (e.g. nm)
 
 
 # Testing
@@ -100,7 +100,7 @@ Hacky way to test this:
 ```
 $ wget https://people.canonical.com/~mvo/tmp/mvo-amd64.signed
 $ snap download pc-kernel=18 core18 snapd
-$ cd pc-amd64-gadget
+$ cd pc-arm64-gadget-desktop
 $ snapcraft
 $ cd ..
 $ ubuntu-image mvo-amd64.signed --extra-snaps ./pc_20-0.1_amd64.snap --extra-snaps ./pc-kernel_*.snap --extra-snaps ./core18_*.snap --extra-snaps ./snapd_*.snap
